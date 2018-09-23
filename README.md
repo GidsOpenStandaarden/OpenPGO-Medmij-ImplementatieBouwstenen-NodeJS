@@ -84,7 +84,7 @@ new medmij.OCL(function(error, ocl) {
 });
 ```
 
-Settings are in `src/settings.js`. Following settings are relevant for the Zorgaanbiederslijst:
+Settings are in `src/settings.js`. Following settings are relevant for the client list:
 ```
 {
   ...
