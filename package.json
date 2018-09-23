@@ -1,0 +1,22 @@
+{
+  "name": "node-medmij",
+  "version": "0.1.0",
+  "description": "Library for MedMij Whitelist, ZAL and OAuth Client list",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine-node": "^1.15.0",
+    "node-xmllint": "^1.0.0",
+    "xml2js": "^0.4.19"
+  },
+  "scripts": {
+    "test": "jasmine-node ./test"
+  },
+  "keywords": [
+    "MedMij",
+    "whitelist",
+    "zorgaanbiederlijst",
+    "OAuth"
+  ],
+  "author": "Hugo W.L. ter Doest",
+  "license": "AGPL-3.0-or-later"
+}

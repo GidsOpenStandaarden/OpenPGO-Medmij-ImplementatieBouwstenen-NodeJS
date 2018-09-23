@@ -1,0 +1,9 @@
+{
+  "debug": false,
+  "whitelistSchemaURL": "https://afsprakenstelsel.medmij.nl/download/attachments/22348206/MedMij_Whitelist.xsd?version=1&modificationDate=1535034702933&api=v2",
+  "whitelistURL": "https://afsprakenstelsel.medmij.nl/download/attachments/22348206/MedMij_Whitelist_example.xml?version=1&modificationDate=1535034702940&api=v2",
+  "zalSchemaURL" : "https://afsprakenstelsel.medmij.nl/download/attachments/22348206/MedMij_Zorgaanbiederslijst.xsd?version=1&modificationDate=1535034702935&api=v2",
+  "zalURL" : "https://afsprakenstelsel.medmij.nl/download/attachments/22348206/MedMij_Zorgaanbiederslijst_example.xml?version=1&modificationDate=1535034702942&api=v2",
+  "oclSchemaURL": "https://afsprakenstelsel.medmij.nl/download/attachments/22348206/MedMij_OAuthclientlist.xsd?version=1&modificationDate=1535034702931&api=v2",
+  "oclURL": "https://afsprakenstelsel.medmij.nl/download/attachments/22348206/MedMij_OAuthclientlist_example.xml?version=1&modificationDate=1535034702941&api=v2"
+}
