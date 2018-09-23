@@ -101,7 +101,7 @@ console.log(ocl.getList());
 
 To get a OAuth client by name:
 ```javascript
-console.log(ocl.getZorgaanbieder('De Enige Echte PGO'));
+console.log(ocl.getClient('De Enige Echte PGO'));
 // returns the complete object
 ```
 The name is matched with `OAuthclientOrganisatienaam`.
