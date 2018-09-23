@@ -8,6 +8,7 @@ npm install node-medmij
 ## Design
 
 The MedMij implementation for lists consists of four classes. First, there is a generic List class that takes care of downloading XML and schema files from URLs, validating XML's against schema and translating XML into Javascript objects. Three classes specialise the List class: they inherit from the generic List class and add specific methods for Whitelist, Zorgaanbiederslijst and OAuth client list.
+
 ![Class diagram for node-medmij](./resources/node-medmij-class-diagram.png)
 
 
