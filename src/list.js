@@ -64,7 +64,7 @@ class List {
               });
             }
           }
-        );;
+        );
       })
       .then(function(data) {
         return new Promise(
@@ -123,7 +123,7 @@ class List {
     return this.list;
   }
   
-};
+}
 
 
 module.exports = List;

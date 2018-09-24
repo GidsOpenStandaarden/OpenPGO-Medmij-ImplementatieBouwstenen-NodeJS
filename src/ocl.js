@@ -52,7 +52,7 @@ class OCL extends List {
     });
     return matchingClient;
   }
-};
+}
 
 
 module.exports = OCL;

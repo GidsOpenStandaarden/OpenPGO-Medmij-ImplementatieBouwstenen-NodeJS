@@ -51,7 +51,7 @@ class ZAL extends List {
     });
     return matchingZA;
   }
-};
+}
 
 
 module.exports = ZAL;

@@ -20,7 +20,7 @@ var medmij = require('../src');
 var ZAL = medmij.ZAL;
 
 describe('Whitelist parser', function() {
-  var whitelistGlobal = null;
+  var zalGlobal = null;
   
   it('should create a whitelist parser from schema and XML files', function(done) {
     new ZAL(function(error, zal) {

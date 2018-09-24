@@ -50,6 +50,6 @@ class Whitelist extends List {
     });
     return found;
   }
-};
+}
 
 module.exports = Whitelist;

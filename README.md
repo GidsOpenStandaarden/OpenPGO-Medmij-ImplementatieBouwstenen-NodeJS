@@ -1,3 +1,5 @@
+[![Sonar](https://sonarcloud.io/api/project_badges/measure?project=Hugo-ter-Doest_node-medmij&metric=alert_status)](https://sonarcloud.io/dashboard?id=Hugo-ter-Doest_node-medmij)
+
 # MedMij Nodejs library
 
 ## Installation
@@ -28,6 +30,7 @@ Settings are in `src/settings.js`. Following settings are relevant for whitelist
   "whitelistSchemaURL": "https://afsprakenstelsel.medmij.nl/download/...",
   "whitelistURL": "https://afsprakenstelsel.medmij.nl/download/...",
   ...
+}
 ```
 
 To get the complete whitelist:
@@ -128,5 +131,7 @@ Current settings for schema and example files follow the [MedMij Afsprakenstelse
 * `xml2js`: for translating XML files to Javascript objects
 
 
-## License
-[GNU AFFERO GENERAL PUBLIC LICENSE Version 3](https://www.gnu.org/licenses/agpl-3.0.en.html)
+## Licenses
+Source code: [GNU AFFERO GENERAL PUBLIC LICENSE Version 3](https://www.gnu.org/licenses/agpl-3.0.en.html)
+
+Content: [Creative Commons Attribution Sharealike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
