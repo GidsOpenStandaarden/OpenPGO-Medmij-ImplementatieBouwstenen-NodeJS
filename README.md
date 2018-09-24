@@ -1,3 +1,4 @@
+[![NPM version](https://img.shields.io/npm/v/node-medmij.svg)](https://www.npmjs.com/package/node-medmij)
 [![Sonar](https://sonarcloud.io/api/project_badges/measure?project=Hugo-ter-Doest_node-medmij&metric=alert_status)](https://sonarcloud.io/dashboard?id=Hugo-ter-Doest_node-medmij)
 
 # MedMij Nodejs library
