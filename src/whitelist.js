@@ -26,7 +26,7 @@ var xml2js = require('xml2js');
 var List = require('./list');
 
 var settings = require('./settings');
-var schemaURL = settings.whitelistSchemaURL;
+var schemaPath = settings.whitelistSchemaPath;
 var xmlURL = settings.whitelistURL;
 var DEBUG = settings.debug;
 
@@ -34,7 +34,7 @@ var DEBUG = settings.debug;
 class Whitelist extends List {
   
   constructor(callback) {
-    super(schemaURL, xmlURL, callback);
+    super(schemaPath, xmlURL, callback);
   }
   
   // Validates a hostname against the whitelist, returns true if the hostname is on the list

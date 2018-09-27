@@ -29,12 +29,19 @@ var DEBUG = settings.debug;
 
 class List {
   
-  constructor(schemaURL, xmlURL, callback) {
+  constructor(schemaPath, xmlURL, callback) {
     var that = this;
 
-    var readSchemaFromURLPromise = new Promise(
+    var readSchemaFromPathPromise = new Promise(
       function(resolve, reject) {
-        that.readFileFromURL(schemaURL, resolve, reject);
+        fs.readFile(schemaPath, 'utf8', function(error, data) {
+          if (error) {
+            reject(error);
+          }
+          else {
+            resolve(data);
+          }
+      });
       }
     );
 
@@ -44,7 +51,7 @@ class List {
       }
     );
     
-    Promise.all([readSchemaFromURLPromise, readListFromURLPromise])
+    Promise.all([readSchemaFromPathPromise, readListFromURLPromise])
       .then(function([schema, xml]) {
         return new Promise(
           function(resolve, reject) {

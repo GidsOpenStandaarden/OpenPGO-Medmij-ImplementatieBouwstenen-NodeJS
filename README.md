@@ -1,4 +1,5 @@
 [![NPM version](https://img.shields.io/npm/v/node-medmij.svg)](https://www.npmjs.com/package/node-medmij)
+[![Build Status](https://travis-ci.org/GidsOpenStandaarden/OpenPGO-Medmij-ImplementatieBouwstenen-NodeJS.png?branch=master)](https://travis-ci.org/GidsOpenStandaarden/OpenPGO-Medmij-ImplementatieBouwstenen-NodeJS)
 [![Sonar](https://sonarcloud.io/api/project_badges/measure?project=Hugo-ter-Doest_node-medmij&metric=alert_status)](https://sonarcloud.io/dashboard?id=Hugo-ter-Doest_node-medmij)
 
 # MedMij Nodejs library
@@ -14,6 +15,8 @@ The MedMij implementation for lists consists of four classes. First, there is a 
 
 ![Class diagram for node-medmij](./resources/node-medmij-class-diagram.png)
 
+It is assumed that XML Schema's are on the local filesystem, and that XML files are retrieved from a URL. Locations are configurable in a settings file.
+
 
 ## Whitelist
 On creation the whitelist object downloads the whitelist schema, the whitelist itself and then validates the whitelist against the schema.
@@ -28,7 +31,7 @@ Settings are in `src/settings.js`. Following settings are relevant for whitelist
 ```
 {
   ...
-  "whitelistSchemaURL": "https://afsprakenstelsel.medmij.nl/download/...",
+  "whitelistSchemaPath": "./src/xsd/MedMij_Whitelist.xsd",
   "whitelistURL": "https://afsprakenstelsel.medmij.nl/download/...",
   ...
 }
@@ -59,7 +62,7 @@ Settings are in `src/settings.js`. Following settings are relevant for the Zorga
 ```
 {
   ...
-  "zalSchemaURL" : "https://afsprakenstelsel.medmij.nl/download/...",
+  "zalSchemaPath" : "./src/xsd/MedMij_Zorgaanbiederslijst.xsd",
   "zalURL" : "https://afsprakenstelsel.medmij.nl/download/...",
   ...
 }
@@ -92,7 +95,7 @@ Settings are in `src/settings.js`. Following settings are relevant for the clien
 ```
 {
   ...
-  "oclSchemaURL": "https://afsprakenstelsel.medmij.nl/download/...",
+  "oclSchemaPath": "./src/xsd/MedMij_OAuthclientlist.xsd",
   "oclURL": "https://afsprakenstelsel.medmij.nl/download/..."
 }
 ```

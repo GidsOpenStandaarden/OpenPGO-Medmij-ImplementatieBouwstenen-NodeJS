@@ -26,7 +26,7 @@ var xml2js = require('xml2js');
 var List = require('./list');
 
 var settings = require('./settings');
-var zalSchemaURL = settings.zalSchemaURL;
+var zalSchemaPath = settings.zalSchemaPath;
 var zalURL = settings.zalURL;
 var DEBUG = settings.debug;
 
@@ -34,7 +34,7 @@ var DEBUG = settings.debug;
 class ZAL extends List {
   
   constructor(callback) {
-    super(zalSchemaURL, zalURL, callback);
+    super(zalSchemaPath, zalURL, callback);
   }
   
   // Validates a hostname against the whitelist, returns true if the hostname is on the list
