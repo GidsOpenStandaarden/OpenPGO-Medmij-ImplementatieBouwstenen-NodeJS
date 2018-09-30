@@ -9,6 +9,6 @@ cache:
     - node_modules
 addons:
   sonarcloud:
-    organization: "GidsOpenStandaarden-github"
+    organization: "hugo-ter-doest-github"
 script:
   - sonar-scanner
