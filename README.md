@@ -114,6 +114,72 @@ console.log(ocl.getClient('De Enige Echte PGO'));
 The name is matched with `OAuthclientOrganisatienaam`.
 
 
+## Getting zorgaanbieder OAuth URL
+To obtain the URL to which to redirect a zorggebruiker for authentication:
+
+```javascript
+const zao = new medmij.ZAOAuth();
+console.log(zao.makeRedirectURI("https://pgo.example.com/oauth", "abc", "xyz"));
+// https://pgo.example.com/oauth/cb?state=abc&code=xyz
+```
+
+## Obtaining access tokens
+Getting the URL at which to request an access token:
+
+```javascript
+const PGOOAuth = medmij.PGOOAuth;
+const ZAL = medmij.ZAL;
+const OCL = medmij.OCL;
+
+new OCL(function (error, ocl) {
+  if (error) {
+    console.log(`Error instantiating OCL: ${error}`);
+  } else {
+    new ZAL(function (error, zal) {
+      if (error) {
+         console.log(`Error instantiating ZAL: ${error}`);
+      } else {
+        const za = zal.getZorgaanbieder("umcharderwijk@medmij");
+        const geg = za.Gegevensdiensten[0].Gegevensdienst[0];
+        const authEndpoint = geg.AuthorizationEndpoint[0].AuthorizationEndpointuri[0];
+        const zorgaanbieder = "umcharderwijk";
+        const gegID = geg.GegevensdienstId[0];
+
+        const oc = ocl.getClient("De Enige Echte PGO");
+        console.log(pgoGlobal.makeAuthURL(authEndpoint, zorgaanbieder, gegID, oc.Hostname[0], "https://pgo.example.com/oauth", "abcd").href);
+      }
+    });
+  }
+});
+// URL for requesting an access token at the PGO
+```
+
+Requesting the access token at the obtained URL:
+
+```javascript
+new ZAL(function (error, zal) {
+  if (error) {
+    console.log(`Error instantiating ZAL: ${error}`);
+  } else {
+    const za = zal.getZorgaanbieder("umcharderwijk@medmij");
+    const geg = za.Gegevensdiensten[0].Gegevensdienst[0];
+    const tokenEndpoint = geg.TokenEndpoint[0].TokenEndpointuri[0];
+    const zorgaanbieder = "umcharderwijk";
+    const gegID = geg.GegevensdienstId[0];
+
+    pgoGlobal.getAccessToken(tokenEndpoint, "xyz", "https://pgo.example.com/oauth", function(token, error) {
+      if (error) {
+        console.log(`Error obtaining access token: ${error}`);
+      } else {
+        console.log(token);
+      }
+    });
+  }
+});
+// The obtained access token
+```
+
+
 ## Testing
 Unit tests are written using jasmine-node. These can be started as follows:
 ```javascript

@@ -1,6 +1,6 @@
 /*
-Index file of de MedMij library
-Copyright (C) 2018 Hugo W.L. ter Doest
+ZAOAuth unit test
+Copyright (C) 2018 Zorgdoc
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
@@ -16,8 +16,18 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-exports.Whitelist = require('./whitelist');
-exports.ZAL = require('./zal');
-exports.OCL = require('./ocl');
-exports.ZAOAuth = require('./za_oauth');
-exports.PGOOAuth = require('./pgo_oauth');
+var medmij = require('../src');
+var ZAOAuth = medmij.ZAOAuth;
+
+describe('ZA OAuth', function() {
+  var zaoGlobal = null;
+  
+  it('should create a ZAOAuth instance', function() {
+    zaoGlobal = new ZAOAuth();
+    expect(zaoGlobal instanceof ZAOAuth).toEqual(true);
+  });
+                  
+  it('should return correct oauth url', function() {
+    expect(zaoGlobal.makeRedirectURL("https://pgo.example.com/oauth", "abc", "xyz").href).toEqual("https://pgo.example.com/oauth/cb?state=abc&code=xyz");
+  });
+});
