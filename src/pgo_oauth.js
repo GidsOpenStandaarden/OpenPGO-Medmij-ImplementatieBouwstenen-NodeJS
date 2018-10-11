@@ -76,7 +76,7 @@ class PGOOAuth {
         var response = "";
         const request = https.request(options, function(res) {
             res.on('response', function(chunk) {
-                data += chunk;
+                response += chunk;
             });
 
             res.on('end', function() {
