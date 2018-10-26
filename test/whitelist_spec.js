@@ -20,8 +20,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 var medmij = require('../src');
 var Whitelist = medmij.Whitelist;
 
+var whitelistGlobal = null;
+
 describe('Whitelist parser', function() {
-  var whitelistGlobal;
   
   it('should create a whitelist parser from schema and XML files', function(done) {
     new Whitelist(function(error, whitelist) {
