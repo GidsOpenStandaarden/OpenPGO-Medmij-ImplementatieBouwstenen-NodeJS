@@ -1,9 +1,9 @@
 {
   "debug": false,
   "whitelistSchemaPath": "./src/xsd/MedMij_Whitelist.xsd",
-  "whitelistURL": "https://raw.githubusercontent.com/GidsOpenStandaarden/OpenPGO-Medmij-ImplementatieBouwstenen-Opdracht/master/Resources/MedMij_Whitelist_example.xml",
+  "whitelistURL": "https://afsprakenstelsel.medmij.nl/download/attachments/22348803/MedMij_Whitelist_example.xml?version=1&modificationDate=1538136425019&api=v2",
   "zalSchemaPath" : "./src/xsd/MedMij_Zorgaanbiederslijst.xsd",
-  "zalURL": "https://raw.githubusercontent.com/GidsOpenStandaarden/OpenPGO-Medmij-ImplementatieBouwstenen-Opdracht/master/Resources/MedMij_Zorgaanbiederslijst_example.xml",
+  "zalURL": "https://afsprakenstelsel.medmij.nl/download/attachments/22348803/MedMij_Zorgaanbiederslijst_example.xml?version=1&modificationDate=1538136425025&api=v2",
   "oclSchemaPath": "./src/xsd/MedMij_OAuthclientlist.xsd",
-  "oclURL": "https://raw.githubusercontent.com/GidsOpenStandaarden/OpenPGO-Medmij-ImplementatieBouwstenen-Opdracht/master/Resources/MedMij_OAuthclientlist_example.xml"
+  "oclURL": "https://afsprakenstelsel.medmij.nl/download/attachments/22348803/MedMij_OAuthclientlist_example.xml?version=1&modificationDate=1538136425022&api=v2"
 }
