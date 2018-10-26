@@ -9,7 +9,8 @@
     "xml2js": "^0.4.19"
   },
   "scripts": {
-    "test": "jasmine-node ./test"
+    "test": "jasmine-node ./test",
+    "cover": "istanbul cover jasmine-node ./test"
   },
   "keywords": [
     "MedMij",
@@ -18,5 +19,8 @@
     "OAuth"
   ],
   "author": "Hugo W.L. ter Doest",
-  "license": "AGPL-3.0-or-later"
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "istanbul": "^0.4.5"
+  }
 }
