@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-  - "8"
   - "10"
 before_install: 'npm install -g jasmine-node'
 install: 'npm i'
@@ -11,4 +10,6 @@ addons:
   sonarcloud:
     organization: "hugo-ter-doest-github"
 script:
+  - npm run test
+  - npm run cover
   - sonar-scanner
