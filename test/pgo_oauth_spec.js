@@ -53,7 +53,6 @@ describe('PGO OAuth', function() {
     });
   });
 
-  
   it('should return an access token', function(done) {
     new ZAL(function (error, zal) {
       if (error) {
@@ -78,5 +77,4 @@ describe('PGO OAuth', function() {
       }
     });
   });
-  
 });
