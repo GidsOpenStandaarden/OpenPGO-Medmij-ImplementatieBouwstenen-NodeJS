@@ -53,7 +53,7 @@ describe('PGO OAuth', function() {
     });
   });
 
-  /*
+  
   it('should return an access token', function(done) {
     new ZAL(function (error, zal) {
       if (error) {
@@ -64,16 +64,19 @@ describe('PGO OAuth', function() {
         const tokenEndpoint = geg.TokenEndpoint[0].TokenEndpointuri[0];
         const zorgaanbieder = "umcharderwijk";
         const gegID = geg.GegevensdienstId[0];
+        console.log(tokenEndpoint);
 
         pgoGlobal.getAccessToken(tokenEndpoint, "xyz", "https://pgo.example.com/oauth", function(token, error) {
           if (error) {
             console.log(error);
+            done();
           } else {
-            //expect(token).toBeDefined();
+            expect(token).toBeDefined();
+            done();
           }
         });
       }
     });
   });
-  */
+  
 });
