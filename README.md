@@ -183,7 +183,7 @@ new ZAL(function (error, zal) {
 ```
 
 ## Gegevensdienstnamenlijst
-On creation the GNL object downloads the Gegevensdienstnamenlijst schema, the Gegevensdienstnamelijst itself and then validates the list against the schema.
+On creation the GNL object downloads the Gegevensdienstnamenlijst schema, the Gegevensdienstnamenlijst itself and then validates the list against the schema.
 ```javascript
 var medmij = require('node-medmij');
 new medmij.GNL(function(error, gnl) {
@@ -191,7 +191,7 @@ new medmij.GNL(function(error, gnl) {
 });
 ```
 
-Settings are in `src/settings.js`. Following settings are relevant for the Zorgaanbiederslijst:
+Settings are in `src/settings.js`. Following settings are relevant for the Gegevensdienstnamenlijst:
 ```
 {
   ...
