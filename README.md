@@ -1,6 +1,9 @@
 [![NPM version](https://img.shields.io/npm/v/node-medmij.svg)](https://www.npmjs.com/package/node-medmij)
 [![Build Status](https://travis-ci.org/GidsOpenStandaarden/OpenPGO-Medmij-ImplementatieBouwstenen-NodeJS.png?branch=master)](https://travis-ci.org/GidsOpenStandaarden/OpenPGO-Medmij-ImplementatieBouwstenen-NodeJS)
 [![Sonar](https://sonarcloud.io/api/project_badges/measure?project=Hugo-ter-Doest_node-medmij&metric=alert_status)](https://sonarcloud.io/dashboard?id=Hugo-ter-Doest_node-medmij)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
 
 # MedMij Nodejs library 
 
@@ -177,6 +180,37 @@ new ZAL(function (error, zal) {
   }
 });
 // The obtained access token
+```
+
+## Gegevensdienstnamenlijst
+On creation the GNL object downloads the Gegevensdienstnamenlijst schema, the Gegevensdienstnamelijst itself and then validates the list against the schema.
+```javascript
+var medmij = require('node-medmij');
+new medmij.GNL(function(error, gnl) {
+  // do something with the Gegevensdienstnamenlijst
+});
+```
+
+Settings are in `src/settings.js`. Following settings are relevant for the Zorgaanbiederslijst:
+```
+{
+  ...
+  "gnlSchemaPath" : "./src/xsd/MedMij_Gegevensdienstnamenlijst.xsd",
+  "gnlURL" : "https://afsprakenstelsel.medmij.nl/download/...",
+  ...
+}
+```
+
+To get the complete Gegevensdienstnamenlijst:
+```javascript
+console.log(gnl.getList());
+// an array of gegevensdienstnamen in the original format from xml2js
+```
+
+To get a map from id to gegevensdienstnaam use the following:
+```javascript
+console.log(gnl.getMapIdToName());
+// a map from id to gegevensdienstnaam
 ```
 
 

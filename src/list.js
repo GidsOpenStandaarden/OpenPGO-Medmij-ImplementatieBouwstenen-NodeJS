@@ -94,6 +94,7 @@ class List {
       })
       .then(function(data) {
         that.list = data.json;
+        DEBUG && console.log("List: " + JSON.stringify(that.list, null, 2));
         that.xml = data.xml;
         that.schema = data.schema;
         callback(null, that)

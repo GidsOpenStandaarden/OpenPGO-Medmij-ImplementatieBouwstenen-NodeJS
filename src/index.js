@@ -21,3 +21,4 @@ exports.ZAL = require('./zal');
 exports.OCL = require('./ocl');
 exports.ZAOAuth = require('./za_oauth');
 exports.PGOOAuth = require('./pgo_oauth');
+exports.GNL = require('./gnl');
