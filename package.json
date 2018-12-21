@@ -1,6 +1,6 @@
 {
   "name": "node-medmij",
-  "version": "0.3.0",
+  "version": "0.2.1",
   "description": "Library for MedMij Whitelist, ZAL and OAuth Client list",
   "main": "index.js",
   "dependencies": {
