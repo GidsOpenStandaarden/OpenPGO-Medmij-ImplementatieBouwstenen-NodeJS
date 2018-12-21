@@ -5,7 +5,23 @@
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 
-# MedMij Nodejs library 
+# MedMij Nodejs library
+
+Nodejs implementation of the MedMij OpenPGO building blocks.
+
+
+## Version Guidance
+
+This library follows [Semantic Versioning](https://semver.org/).
+The versions of the Afspraken set are mapped to the versions of the library as follows:
+
+| Version Afsprakenset       | Status     | Version library |
+|----------------------------|------------|-----------------|
+| [Afsprakenset release 1.1] | Latest     | 0.2.*           |
+| Afsprakenset release 1.0   | EOL        | 0.1.*           |
+
+[Afsprakenset release 1.1]: https://afsprakenstelsel.medmij.nl/display/PUBLIC/Afsprakenset+release+1.1
+
 
 ## Installation
 ```javascript

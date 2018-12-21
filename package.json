@@ -1,7 +1,7 @@
 {
   "name": "node-medmij",
-  "version": "0.2.0",
-  "description": "Library for MedMij Whitelist, ZAL and OAuth Client list",
+  "version": "0.2.1",
+  "description": "Nodejs implementation of the MedMij OpenPGO building blocks",
   "main": "index.js",
   "dependencies": {
     "jasmine-node": "^1.15.0",
